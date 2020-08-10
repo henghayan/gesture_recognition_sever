@@ -1,0 +1,356 @@
+:root {
+    --tiantest-green:  #44a15b;
+    --tiantest-green-light: rgba(165, 220, 134, 0.2);
+}
+
+.tiantest-icon--success {
+    border-color: var(--tiantest-green);
+    /* Moving circular line */
+    /* Ring */
+    /* Hide corners left from animation */
+}
+.tiantest-icon--success::before, .tiantest-icon--success::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: .66em;
+    height: 1.2em;
+    background: white;
+    transform: rotate(45deg);
+}
+.tiantest-icon--success::before {
+    border-radius: 1.2em 0 0 1.2em;
+    top: -.07em;
+    left: -.33em;
+    transform: rotate(-45deg);
+    transform-origin: 0.6em 0.6em;
+}
+.tiantest-icon--success::after {
+    border-radius: 0 1.2em 1.2em 0;
+    top: -.11em;
+    left: .3em;
+    transform: rotate(-45deg);
+    transform-origin: 0px 0.6em;
+    animation: rotatePlaceholder 4.25s ease-in;
+}
+.tiantest-icon--success__ring {
+    width: .8em;
+    height: .8em;
+    border: 4px solid var(--tiantest-green-light);
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: absolute;
+    left: -.04em;
+    top: -.04em;
+    z-index: 222;
+}
+.tiantest-icon--success__hide-corners {
+    width: .05em;
+    height: .9em;
+    background-color: white;
+    padding: 1px;
+    position: absolute;
+    left: .28em;
+    top: 0.08em;
+    z-index: 221;
+    transform: rotate(-45deg);
+}
+.tiantest-icon--success__line {
+    height: .05em;
+    background-color: var(--tiantest-green);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 222;
+}
+.tiantest-icon--success__line--tip {
+    width: .25em;
+    left: .14em;
+    top: .46em;
+    transform: rotate(45deg);
+    animation: animateSuccessTip 0.75s;
+}
+.tiantest-icon--success__line--long {
+    width: .47em;
+    right: .08em;
+    top: .38em;
+    transform: rotate(-45deg);
+    animation: animateSuccessLong 0.75s;
+}
+
+@keyframes rotatePlaceholder {
+    0% {
+        transform: rotate(-45deg);
+    }
+    5% {
+        transform: rotate(-45deg);
+    }
+    12% {
+        transform: rotate(-405deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+@keyframes animateSuccessTip {
+    0% {
+        width: 0;
+        left: .01em;
+        top: .19em;
+    }
+    54% {
+        width: 0;
+        left: .01em;
+        top: .19em;
+    }
+    70% {
+        width: .5em;
+        left: -.08em;
+        top: .37em;
+    }
+    84% {
+        width: .17em;
+        left: .21em;
+        top: .48em;
+    }
+    100% {
+        width: .25em;
+        left: .14em;
+        top: .45em;
+    }
+}
+@keyframes animateSuccessLong {
+    0% {
+        width: 0;
+        right: .46em;
+        top: .54em;
+    }
+    65% {
+        width: 0;
+        right: .46em;
+        top: .54em;
+    }
+    84% {
+        width: .55em;
+        right: 0px;
+        top: .35em;
+    }
+    100% {
+        width: .47em;
+        right: .08em;
+        top: .38em;
+    }
+}
+
+.tiantest-icon {
+    width: .8em;
+    height: .8em;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box;
+    /* margin: 20px auto; */
+    /* transform-style: preserve-3d; */
+    transform-origin: 14% 12%;
+    transform: scale(0.3,0.3);
+}
+
+.tiantest-icon--info:after, .tiantest-icon--info:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background-color: #2364a8;
+}
+.tiantest-icon--info {
+    border-color: rgba(35,100,168,0.3);
+}
+.tiantest-icon--info:before {
+    width: 0.05em;
+    height: 0.29em;
+    bottom: .17em;
+    border-radius: 2px;
+    margin-left: -0.02em;
+}
+.tiantest-icon--info:after {
+    width: 0.07em;
+    height: 0.07em;
+    border-radius: 50%;
+    margin-left: -0.03em;
+    top: .19em;
+}
+
+.tiantest-icon--info:after, .tiantest-icon--info:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background-color: #2364a8;
+}
+.tiantest-btn-box{
+    height: 0.4em;
+    width: 100%;
+    position: relative;
+    padding-left: 0.1em;
+    box-sizing: border-box;
+    padding-top: 0.11em;
+    padding-right: .1em;
+}
+.tiantest-btn{
+    width: 0.24em;
+    vertical-align: top;
+    display: block;
+    margin-right: 0.14em;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    line-height: normal;
+}
+.tiantest-btn:after{
+    clear: both;
+}
+
+.tiantest-hotiantest-text:before{
+    bottom: 3px;
+    border-width: 5px 5px 0;
+    border-top-color: rgba(0,0,0,0.75);
+    left: 50%;
+    margin-left: -5px;
+}
+.tiantest-btn .tiantest{
+    font-size: .26em;
+    display: block;
+    color: #2477FE;
+}
+.tiantest-full-logo-box{
+    position: absolute;
+    right: -.12em;
+    top: 0.02em;
+}
+.tiantest-full-logo-box .tiantest{
+    font-size: .4em;
+    color: #4a90e3;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+
+.tiantest-tooltip {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    position: absolute;
+    z-index: 221090;
+    max-width: 250px;
+    visibility: visible;
+    top: -2.8em;
+    left: 50%;
+    width: 5.4em;
+    text-align: center;
+     display: none;
+    margin-left: -2.7em;
+}
+.tiantest-btn:hover .tiantest-tooltip{
+    display: block;
+}
+.tiantest-root-mobile .tiantest-btn:hover .tiantest-tooltip{
+    display: none;
+}
+.tiantest-tooltip-placement-top .tiantest-tooltip-arrow {
+    left: 50%;
+    margin-left: -5px;
+}
+.tiantest-tooltip-placement-top .tiantest-tooltip-arrow, .tiantest-tooltip-placement-topLeft .tiantest-tooltip-arrow, .tiantest-tooltip-placement-topRight .tiantest-tooltip-arrow {
+    bottom: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: rgba(0,0,0,0.75);
+}
+.tiantest-tooltip-inner {
+    min-width: 30px;
+    min-height: 20px;
+    padding: 6px 8px;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    word-wrap: break-word;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.tiantest-tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+.ie-disable-animation{
+    border: none !important;
+    transform: none !important;
+}
+
+/*.tiantest-animation{
+    width: .16em;
+    height: .16em;
+    transform-style: preserve-3d;
+    !*  transform: rotate3d(1,1,1,50deg);*!
+    animation: scroll 2s linear 1s infinite;
+}*/
+.tiantest-animation-box{
+    transform-style: preserve-3d;
+    transform-origin: -50% -10%;
+    transform: scale3d(0.12,0.12,0.12);
+    /* animation: leftMove 1.5s linear infinite; */
+    position: absolute;
+    left: 0.2em;
+    top: 50%;
+    width: 0.18em;
+    height: 0.18em;
+    margin-top: -0.13em;
+}
+.tiantest-animation-scale{
+    width: 1.5em;
+    height: 2.6em;
+    transform-style: preserve-3d;
+    /* transform: scale3d(1,1,1);*/
+    /*  animation: scaletiantest 2s linear infinite;*/
+    transform-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scaletiantest{
+    0% {
+        transform: scale3d(1,1,1);
+        -webkit-backface-visibility: hidden;
+    }
+    100% {
+        transform: scale3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+.tiantest-animation{
+    width: .16em;
+    height: .16em;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    /* transform: rotate3d(1,1,1,360deg); */
+    transform: rotate3d(1,1,1,45deg) translateZ(-11px) translateY(-1px) translateX(-1px);
+    /* animation: scroll 2s linear 1s infinite; */
+}
+.tiantest-animation *{
+    -webkit-backface-visibility: hidden;
+}
+.tiantest-root-blue-theme .tiantest-animation-box,.tiantest-root-white-theme .tiantest-animation-box{
+    display: none;
+}
